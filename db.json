@@ -1,25 +1,112 @@
-{"Data":[
-{"Question":"Какие из перечисленных вариантов записи функции main не являются стандартом?",
-"Answers":["int main(int argc, char* argv[]) {}","void main() {}","int main() {}","char main() {}"],
-"CorrectAnswer":"void main() {}","ID":1},
-{"Question":"Какой из перечисленных модификаторов является модификатором размера?",
-"Answers":["long","signed","unsigned","Ни один из перечисленных не является модификатором размера"],
-"CorrectAnswer":"long","ID":2},
-{"Question":"Можно ли комбинировать модификаторы знаковости и размера?",
-"Answers":["Да","Нет","Возможно","Частично"],"CorrectAnswer":"Да","ID":3},
-{"Question":"Указатель, который всегда сохраняет текущий адрес активного объекта",
-"Answers":["auto_ptr","this","p","none of the above."],"CorrectAnswer":"this","ID":4},
-{"Question":"Какой из перечисленных типов данных не является фундаментальным?",
-"Answers":["double","float","string","char"],"CorrectAnswer":"string","ID":5},
-{"Question":"Какой оператор должен быть перегружен только как функция-член?",
-"Answers":["_","_ _","=","_ _ _"],"CorrectAnswer":"=","ID":6},
-{"Question":"Выберите вариант неверного включения файла в текущую программу",
-"Answers":["#include \u003cfile\u003e","#include file","#include \u003c file","Все вышесказанное неверно."],
-"CorrectAnswer":"#include \u003c file","ID":7},
-{"Question":"Кто является автором языка программирования C++?",
-"Answers":["Charles Babbage","Dennis Ritchie","Brain Kernighan","Bjarne Stroustrup"],"CorrectAnswer":"Bjarne Stroustrup","ID":8},
-{"Question":"Может ли чисто виртуальная функция иметь тело?",
-"Answers":["Да","Нет","Возможно","Частично"],"CorrectAnswer":"Да","ID":9},
-{"Question":"Какие преобразования, кроме C-style cast, могут быть использованы для преобразования константной переменной в неконстантную?",
-"Answers":["static_cast","dynamic_cast","reinterpret_cast","const_cast"],"CorrectAnswer":"const_cast","ID":10}
-]}
+[
+  {
+    "Question1": "Какие из перечисленных вариантов записи функции main не являются стандартом?",
+    "Answers1": [
+      "int main(int argc, char* argv[]) {}",
+      "void main() {}",
+      "int main() {}",
+      "char main() {}"
+    ],
+    "CorrectAnswer": "void main() {}",
+    "ID": 1
+  },
+  {
+    "Question2": "Какой из перечисленных модификаторов является модификатором размера?",
+    "Answers2": [
+      "long",
+      "signed",
+      "unsigned",
+      "Ни один из перечисленных не является модификатором размера"
+    ],
+    "CorrectAnswer": "long",
+    "ID": 2
+  },
+  {
+    "Question3": "Можно ли комбинировать модификаторы знаковости и размера?",
+    "Answers3": [
+      "Да",
+      "Нет",
+      "Возможно",
+      "Частично"
+    ],
+    "CorrectAnswer": "Да",
+    "ID": 3
+  },
+  {
+    "Question4": "Указатель, который всегда сохраняет текущий адрес активного объекта",
+    "Answers4": [
+      "auto_ptr",
+      "this",
+      "p",
+      "none of the above."
+    ],
+    "CorrectAnswer": "this",
+    "ID": 4
+  },
+  {
+    "Question5": "Какой из перечисленных типов данных не является фундаментальным?",
+    "Answers5": [
+      "double",
+      "float",
+      "string",
+      "char"
+    ],
+    "CorrectAnswer": "string",
+    "ID": 5
+  },
+  {
+    "Question6": "Какой оператор должен быть перегружен только как функция-член?",
+    "Answers6": [
+      "_",
+      "_ _",
+      "=",
+      "_ _ _"
+    ],
+    "CorrectAnswer": "=",
+    "ID": 6
+  },
+  {
+    "Question7": "Выберите вариант неверного включения файла в текущую программу",
+    "Answers7": [
+      "#include <file>",
+      "#include file",
+      "#include < file",
+      "Все вышесказанное неверно."
+    ],
+    "CorrectAnswer": "#include < file",
+    "ID": 7
+  },
+  {
+    "Question8": "Кто является автором языка программирования C++?",
+    "Answers8": [
+      "Charles Babbage",
+      "Dennis Ritchie",
+      "Brain Kernighan",
+      "Bjarne Stroustrup"
+    ],
+    "CorrectAnswer": "Bjarne Stroustrup",
+    "ID": 8
+  },
+  {
+    "Question9": "Может ли чисто виртуальная функция иметь тело?",
+    "Answers9": [
+      "Да",
+      "Нет",
+      "Возможно",
+      "Частично"
+    ],
+    "CorrectAnswer": "Да",
+    "ID": 9
+  },
+  {
+    "Question10": "Какие преобразования, кроме C-style cast, могут быть использованы для преобразования константной переменной в неконстантную?",
+    "Answers10": [
+      "static_cast",
+      "dynamic_cast",
+      "reinterpret_cast",
+      "const_cast"
+    ],
+    "CorrectAnswer": "const_cast",
+    "ID": 10
+  }
+]
