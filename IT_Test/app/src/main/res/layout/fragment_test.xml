@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sarkardeveloper.ittest.TestFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/questionsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text=""
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/linearLayoutTests">
+
+                <RadioButton
+                    android:id="@+id/answerFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text=""
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/answerSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text=""
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/answerThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text=""
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/answerFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text=""
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/submitResultTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup"
+                android:text="Submit"
+                android:onClick="onClickNextQuestion"
+                tools:ignore="OnClick" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

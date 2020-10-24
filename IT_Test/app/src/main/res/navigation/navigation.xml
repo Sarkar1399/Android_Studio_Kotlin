@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/navFragment">
+
+    <fragment
+        android:id="@+id/navFragment"
+        android:name="com.sarkardeveloper.ittest.NavFragment"
+        android:label="fragment_nav"
+        tools:layout="@layout/fragment_nav">
+        <action
+            android:id="@+id/action_navFragment_to_testFragment"
+            app:destination="@id/testFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.sarkardeveloper.ittest.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test">
+        <action
+            android:id="@+id/action_testFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/navFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.sarkardeveloper.ittest.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_navFragment"
+            app:destination="@id/navFragment"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
