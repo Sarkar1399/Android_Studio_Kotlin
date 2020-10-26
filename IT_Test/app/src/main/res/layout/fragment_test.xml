@@ -3,85 +3,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.sarkardeveloper.ittest.TestFragment">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/linearLayoutTests"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/questionsText"
+                <LinearLayout
+                    android:id="@+id/linearLayoutTests"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="12dp"
-                    android:text=""
-                    android:textSize="24sp"/>
+                    android:layout_marginTop="20dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/questionsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="24sp"/>
 
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/linearLayoutTests">
+                </LinearLayout>
 
-                <RadioButton
-                    android:id="@+id/answerFirst"
+                <RadioGroup
+                    android:id="@+id/radioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text=""
-                    android:textSize="18sp"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/linearLayoutTests">
 
-                <RadioButton
-                    android:id="@+id/answerSecond"
+                    <RadioButton
+                        android:id="@+id/answerFirst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <RadioButton
+                        android:id="@+id/answerSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <RadioButton
+                        android:id="@+id/answerThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <RadioButton
+                        android:id="@+id/answerFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                </RadioGroup>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text=""
-                    android:textSize="18sp"/>
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/radioGroup"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/answerThree"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text=""
-                    android:textSize="18sp"/>
+                    <Button
+                        android:id="@+id/submitResultTest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/submit_button"
+                        android:textColor="#FFF"
+                        android:background="@color/backgroundButton"
+                        android:textSize="18sp"
+                        tools:ignore="OnClick" />
 
-                <RadioButton
-                    android:id="@+id/answerFour"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:text=""
-                    android:textSize="18sp"/>
+                </LinearLayout>
 
-            </RadioGroup>
+            </RelativeLayout>
 
-            <Button
-                android:id="@+id/submitResultTest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="50dp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup"
-                android:text="Submit"
-                android:onClick="onClickNextQuestion"
-                tools:ignore="OnClick" />
+        </ScrollView>
 
-        </RelativeLayout>
+    </LinearLayout>
 
-    </ScrollView>
 </layout>

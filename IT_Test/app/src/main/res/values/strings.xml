@@ -5,4 +5,11 @@
     <string name="imageContent">It is content</string>
     <string name="name_content">Programming Languages</string>
     <string name="title">Programming Languages</string>
+    <string name="title_java">Java</string>
+    <string name="title_csharp">C#"</string>
+    <string name="title_cplusplus">C++</string>
+    <string name="title_python">Python</string>
+    <string name="title_result">Result Test</string>
+    <string name="submit_button">Submit</string>
+    <string name="try_again">Try Again</string>
 </resources>

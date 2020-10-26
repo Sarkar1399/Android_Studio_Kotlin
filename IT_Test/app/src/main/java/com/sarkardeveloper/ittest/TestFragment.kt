@@ -25,8 +25,9 @@ class TestFragment : Fragment() {
 
     var correctAnswer = mutableListOf<String>()
     var arra: List<Data>? = null
-    var ids = (0..10).random()
     var num = 0
+    var result = 0
+    var ids = (0..10).random()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,7 @@ class TestFragment : Fragment() {
         if (arguments != null){
             test_name = arguments?.getString("key")
         }
+
         if (test_name != null){
             when(test_name){
                 "java" -> newJavaTest()
@@ -56,12 +58,39 @@ class TestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        onClickNextQuestion(view)
-    }
+        submitResultTest.setOnClickListener {
+            if(num < 10) {
 
-    fun onClickNextQuestion(view: View) {
-        submitResultTest.setOnClickListener { view: View -> view
-            .findNavController().navigate(R.id.action_testFragment_to_resultFragment)}
+                when(radioGroup.checkedRadioButtonId)
+                {
+                    R.id.answerFirst -> correctAnswer.add(answerFirst.text as String)
+                    R.id.answerSecond -> correctAnswer.add(answerSecond.text as String)
+                    R.id.answerThree -> correctAnswer.add(answerThree.text as String)
+                    R.id.answerFour -> correctAnswer.add(answerFour.text as String)
+                }
+                questionsText.text = arra?.get(ids)?.Question
+                answerFirst.text = arra?.get(ids)?.Answers1
+                answerSecond.text = arra?.get(ids)?.Answers2
+                answerThree.text = arra?.get(ids)?.Answers3
+                answerFour.text = arra?.get(ids)?.Answers4
+
+                num++
+            }else{
+                val myResult = Bundle()
+                myResult.putInt("result", result)
+                submitResultTest.setOnClickListener { view: View -> view
+                    .findNavController().navigate(R.id.action_testFragment_to_resultFragment, myResult)}
+            }
+            if (correctAnswer.size == 10){
+                for (correct in arra!!){
+                    for (i in correctAnswer){
+                        if (correct.CorrectAnswer == i){
+                            result += 10
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private fun newJavaTest() {
@@ -81,16 +110,16 @@ class TestFragment : Fragment() {
 
                 val datum = response.body()
 
-                arra = datum
+                if (datum != null) arra = datum
 
                 for (data in datum!!) {
-                    correctAnswer.add(data.CorrectAnswer)
                     if (data.ID == ids) {
                         questionsText.text = data.Question
                         answerFirst.text = data.Answers1
                         answerSecond.text = data.Answers2
                         answerThree.text = data.Answers3
                         answerFour.text = data.Answers4
+
                     }
                 }
             }
@@ -118,10 +147,12 @@ class TestFragment : Fragment() {
 
                 val datum = response.body()
 
-                arra = datum
+                if (datum != null) {
+                    arra = datum
+                }
 
                 for (data in datum!!) {
-                    correctAnswer.add(data.CorrectAnswer)
+//                    correctAnswer.add(data.CorrectAnswer)
                     if (data.ID == ids) {
                         questionsText.text = data.Question
                         answerFirst.text = data.Answers1
@@ -155,10 +186,12 @@ class TestFragment : Fragment() {
 
                 val datum = response.body()
 
-                arra = datum
+                if (datum != null) {
+                    arra = datum
+                }
 
                 for (data in datum!!) {
-                    correctAnswer.add(data.CorrectAnswer)
+//                    correctAnswer.add(data.CorrectAnswer)
                     if (data.ID == ids) {
                         questionsText.text = data.Question
                         answerFirst.text = data.Answers1
@@ -192,10 +225,12 @@ class TestFragment : Fragment() {
 
                 val datum = response.body()
 
-                arra = datum
+                if (datum != null) {
+                    arra = datum
+                }
 
                 for (data in datum!!) {
-                    correctAnswer.add(data.CorrectAnswer)
+//                    correctAnswer.add(data.CorrectAnswer)
                     if (data.ID == ids) {
                         questionsText.text = data.Question
                         answerFirst.text = data.Answers1

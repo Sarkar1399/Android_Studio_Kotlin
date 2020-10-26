@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:gravity="center"
-            android:text="Result Test"
+            android:text="@string/title_result"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -23,33 +23,44 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <com.mikhaellopez.circularprogressbar.CircularProgressBar
-            android:id="@+id/circleProgressBar"
+        <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            app:cpb_background_progressbar_color="#b6bbd8"
-            app:cpb_background_progressbar_width="5dp"
-            app:cpb_progress_direction="to_right"
-            app:cpb_progressbar_color="#3f51b5"
-            app:cpb_progressbar_width="10dp"
-            app:cpb_round_border="false"
+            style="@style/CircularDeterminateProgressBar"
+            android:progress="0"
+            android:animationResolution="10"
             app:layout_constraintBottom_toTopOf="@+id/tryAgain"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.561" />
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="@+id/progressBar"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/tryAgain"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginBottom="112dp"
             android:onClick="onClickToNavFragment"
-            android:text="Try Again"
+            android:text="@string/try_again"
             android:textStyle="bold"
+            android:textColor="#FFF"
+            android:background="@color/backgroundButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

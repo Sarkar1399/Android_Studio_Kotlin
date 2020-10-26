@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         var imageId = 1
         val sliderTimer = object : CountDownTimer(16000, 4000) {
             override fun onTick(millisUntilFinished: Long) {
-                val drawableResource =when(imageId) {
+                val drawableResource = when(imageId) {
                     1 -> R.drawable.ic_cpp
                     2 -> R.drawable.ic_java
                     3 -> R.drawable.ic_csharp

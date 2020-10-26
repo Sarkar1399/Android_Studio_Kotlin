@@ -30,7 +30,6 @@ class NavFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         newJavaTest(view)
         newCsharpTest(view)
         newCplusplusTest(view)
@@ -41,29 +40,32 @@ class NavFragment : Fragment() {
         val test_name = Bundle()
         test_name.putString("key", "java")
 
-        layoutJavaCard.setOnClickListener { view: View -> view
-            .findNavController().navigate(R.id.action_navFragment_to_testFragment, test_name) }
+        layoutJavaCard.setOnClickListener {
+            view.findNavController()
+                .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
-
     fun newCsharpTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "c#")
 
-        layoutCsharpCard.setOnClickListener { view: View -> view
-            .findNavController().navigate(R.id.action_navFragment_to_testFragment, test_name) }
+        layoutCsharpCard.setOnClickListener {
+            view.findNavController()
+                .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
     fun newCplusplusTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "c++")
 
-        layoutCplusplusCard.setOnClickListener { view: View -> view
-            .findNavController().navigate(R.id.action_navFragment_to_testFragment, test_name) }
+        layoutCplusplusCard.setOnClickListener {
+            view.findNavController()
+                .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
     fun newPythonTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "python")
 
-        layoutPythonCard.setOnClickListener { view: View -> view
-            .findNavController().navigate(R.id.action_navFragment_to_testFragment, test_name) }
+        layoutPythonCard.setOnClickListener {
+            view.findNavController()
+                .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
 }

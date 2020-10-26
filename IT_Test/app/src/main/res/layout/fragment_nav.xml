@@ -88,7 +88,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Java"
+                                android:text="@string/title_java"
                                 android:textAlignment="center"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -125,7 +125,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="C#"
+                            android:text="@string/title_csharp"
                             android:textAlignment="center"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -162,7 +162,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="C++"
+                            android:text="@string/title_cplusplus"
                             android:textAlignment="center"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -199,7 +199,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Python"
+                            android:text="@string/title_python"
                             android:textAlignment="center"
                             android:textSize="18sp"
                             android:textStyle="bold" />
