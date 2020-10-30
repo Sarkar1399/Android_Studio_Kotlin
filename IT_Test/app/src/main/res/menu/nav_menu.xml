@@ -2,12 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/about"
-        android:title="About"
+        android:id="@+id/aboutFragment"
+        android:title="@string/title_about"
         android:icon="@drawable/about_icon_foreground"
         />
+
     <item
         android:id="@+id/exit"
-        android:title="Exit"
+        android:title="@string/exit"
         android:icon="@drawable/ic_cancel_foreground"/>
 </menu>

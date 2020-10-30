@@ -40,15 +40,13 @@ class ResultFragment : Fragment() {
         Toast.makeText(view.context, result.toString(), Toast.LENGTH_LONG).show()
         progressBar.progress = result
         progressText.text = "$result%"
-        onClickToNavFragment(view)
+//        onClickToNavFragment(view)
 
-    }
+        tryAgain.setOnClickListener {
+            tryAgain.setOnClickListener { view: View -> view
+                .findNavController().navigate(R.id.action_resultFragment_to_navFragment)}
+        }
 
-    fun onClickToNavFragment(view: View) {
-        val imgSliger = Bundle()
-        imgSliger.putString("key", "Slider")
-        tryAgain.setOnClickListener { view: View -> view
-            .findNavController().navigate(R.id.action_resultFragment_to_navFragment, imgSliger)}
     }
 
 }

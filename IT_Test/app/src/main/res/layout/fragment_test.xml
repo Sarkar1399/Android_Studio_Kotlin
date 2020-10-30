@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.sarkardeveloper.ittest.TestFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -26,10 +31,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:padding="12dp"
+                        android:padding="8dp"
                         android:text=""
-                        android:textStyle="bold"
-                        android:textSize="24sp"/>
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -37,8 +42,8 @@
                     android:id="@+id/radioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_below="@+id/linearLayoutTests">
+                    android:layout_below="@+id/linearLayoutTests"
+                    android:layout_marginTop="20dp">
 
                     <RadioButton
                         android:id="@+id/answerFirst"
@@ -46,8 +51,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:text=""
-                        android:textStyle="bold"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/answerSecond"
@@ -55,8 +60,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:text=""
-                        android:textStyle="bold"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/answerThree"
@@ -64,8 +69,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:text=""
-                        android:textStyle="bold"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/answerFour"
@@ -73,8 +78,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:text=""
-                        android:textStyle="bold"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                 </RadioGroup>
 
@@ -83,18 +88,18 @@
                     android:layout_height="150dp"
                     android:layout_below="@+id/radioGroup"
                     android:layout_marginTop="50dp"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingBottom="20dp"
-                    android:gravity="center">
+                    android:paddingBottom="20dp">
 
                     <Button
                         android:id="@+id/submitResultTest"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
+                        android:background="@color/backgroundButton"
                         android:text="@string/submit_button"
                         android:textColor="#FFF"
-                        android:background="@color/backgroundButton"
                         android:textSize="18sp"
                         tools:ignore="OnClick" />
 
@@ -104,6 +109,6 @@
 
         </ScrollView>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

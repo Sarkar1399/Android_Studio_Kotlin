@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navFragment"
         android:name="com.sarkardeveloper.ittest.NavFragment"
-        android:label="fragment_nav"
+        android:label="@string/lable_app"
         tools:layout="@layout/fragment_nav">
         <action
             android:id="@+id/action_navFragment_to_testFragment"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/testFragment"
         android:name="com.sarkardeveloper.ittest.TestFragment"
-        android:label="fragment_test"
+        android:label="@string/lable_test_fragment"
         tools:layout="@layout/fragment_test">
         <action
             android:id="@+id/action_testFragment_to_resultFragment"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.sarkardeveloper.ittest.ResultFragment"
-        android:label="fragment_result"
+        android:label="@string/lable_result_fragment"
         tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/action_resultFragment_to_navFragment"
@@ -37,4 +37,9 @@
             app:popUpTo="@id/navigation"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.sarkardeveloper.ittest.AboutFragment"
+        android:label="@string/lable_about_fragment"
+        tools:layout="@layout/fragment_about" />
 </navigation>

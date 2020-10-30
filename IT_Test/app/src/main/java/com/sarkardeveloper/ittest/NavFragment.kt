@@ -1,11 +1,15 @@
 package com.sarkardeveloper.ittest
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.view.*
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.sarkardeveloper.test_5.R
 import kotlinx.android.synthetic.main.fragment_nav.*
 
@@ -14,6 +18,7 @@ import kotlinx.android.synthetic.main.fragment_nav.*
  * Use the [NavFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
 class NavFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +29,21 @@ class NavFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        setHasOptionsMenu(true)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_nav, container, false)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.nav_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI
+            .onNavDestinationSelected(item, requireView()
+                .findNavController())||super.onOptionsItemSelected(item)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -68,4 +86,5 @@ class NavFragment : Fragment() {
             view.findNavController()
                 .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
+
 }

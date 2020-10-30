@@ -1,15 +1,22 @@
 <resources>
     <string name="app_name">IT_Test</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="imageContent">It is content</string>
-    <string name="name_content">Programming Languages</string>
-    <string name="title">Programming Languages</string>
+    <string name="title">Языки программирования</string>
     <string name="title_java">Java</string>
     <string name="title_csharp">C#"</string>
     <string name="title_cplusplus">C++</string>
     <string name="title_python">Python</string>
-    <string name="title_result">Result Test</string>
-    <string name="submit_button">Submit</string>
-    <string name="try_again">Try Again</string>
+    <string name="title_result">Ваш результат</string>
+    <string name="submit_button">Далее</string>
+    <string name="try_again">На главную</string>
+    <string name="contact">Обратная связь</string>
+    <string name="title_about">О приложении</string>
+    <string name="lable_app">IT Test</string>
+    <string name="lable_test_fragment">Tests</string>
+    <string name="lable_result_fragment">Result</string>
+    <string name="lable_about_fragment">About</string>
+    <string name="about_it_test">
+            Тесты по языкам программирования. IT Test - это приложение для тестирования специалистов в сфере информмационных технологий. Приложение содержит тесты по различным языкам програмирования. Если вы изучаете программирование и желаете научиться писать код, если уже собрались сдавать экзамены по информатике: вам сюда! Приложение предоставляет тесты по языкам программирования школьного уровня, выступает надежной платформой для постановки первичных навыков алгоритма и обработки данных. Языки программирования: Java, C++, C#, Python.
+    </string>
+    <string name="exit">Выход</string>
 </resources>

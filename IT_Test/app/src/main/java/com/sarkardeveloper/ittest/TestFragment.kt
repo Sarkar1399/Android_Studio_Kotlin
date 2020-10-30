@@ -6,8 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
-import com.sarkardeveloper.ittest.modul.Data
+import com.sarkardeveloper.ittest.modul.*
 import com.sarkardeveloper.test_5.R
 import kotlinx.android.synthetic.main.fragment_test.*
 import retrofit2.Call
@@ -68,11 +69,11 @@ class TestFragment : Fragment() {
                     R.id.answerThree -> correctAnswer.add(answerThree.text as String)
                     R.id.answerFour -> correctAnswer.add(answerFour.text as String)
                 }
-                questionsText.text = arra?.get(ids)?.Question
-                answerFirst.text = arra?.get(ids)?.Answers1
-                answerSecond.text = arra?.get(ids)?.Answers2
-                answerThree.text = arra?.get(ids)?.Answers3
-                answerFour.text = arra?.get(ids)?.Answers4
+                questionsText.text = arra?.get(num)?.Question
+                answerFirst.text = arra?.get(num)?.Answers1
+                answerSecond.text = arra?.get(num)?.Answers2
+                answerThree.text = arra?.get(num)?.Answers3
+                answerFour.text = arra?.get(num)?.Answers4
 
                 num++
             }else{
@@ -119,12 +120,12 @@ class TestFragment : Fragment() {
                         answerSecond.text = data.Answers2
                         answerThree.text = data.Answers3
                         answerFour.text = data.Answers4
-
                     }
                 }
             }
 
             override fun onFailure(call: Call<List<Data>>, t: Throwable) {
+
                 Log.e("ERROR", t.message.toString())
             }
         })
