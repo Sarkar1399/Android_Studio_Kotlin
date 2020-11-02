@@ -1,6 +1,7 @@
 package com.sarkardeveloper.ittest
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.MenuItem
@@ -8,13 +9,13 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.NavController
-import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.sarkardeveloper.test_5.R
 import com.sarkardeveloper.test_5.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.nav_header.*
 import kotlin.system.exitProcess
+
 
 @Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_nav)
 
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(
+            this,
+            R.layout.activity_main
+        )
 
         drawerLayout = binding.drawerLayout
 
@@ -71,7 +75,8 @@ class MainActivity : AppCompatActivity() {
                     else -> R.drawable.ic_cpp
                 }
                 imageId++
-                if(imageSlider !== null) {
+                if(imageSlider != null) {
+
                     imageSlider.setImageResource(drawableResource)
                 } else {
                     imageSlider = findViewById<ImageView>(R.id.imgSlider)
@@ -85,6 +90,28 @@ class MainActivity : AppCompatActivity() {
         }
         sliderTimer.start()
         return sliderTimer
+    }
+
+    fun goToDocJava(item: MenuItem) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://docs.oracle.com/en/java/")
+        startActivity(intent)
+    }
+
+    fun goToDocCsharp(item: MenuItem) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://docs.microsoft.com/en-us/dotnet/csharp/")
+        startActivity(intent)
+    }
+    fun goToDocCplusplus(item: MenuItem) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://devdocs.io/cpp/")
+        startActivity(intent)
+    }
+    fun goToDocPython(item: MenuItem) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://docs.python.org/3/")
+        startActivity(intent)
     }
 
 }

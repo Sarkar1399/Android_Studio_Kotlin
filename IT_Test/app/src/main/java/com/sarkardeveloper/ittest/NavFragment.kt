@@ -1,14 +1,9 @@
 package com.sarkardeveloper.ittest
 
-import android.content.Intent
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.*
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.sarkardeveloper.test_5.R
 import kotlinx.android.synthetic.main.fragment_nav.*
@@ -54,7 +49,7 @@ class NavFragment : Fragment() {
         newPythonTest(view)
     }
 
-    fun newJavaTest(view: View) {
+    private fun newJavaTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "java")
 
@@ -62,7 +57,7 @@ class NavFragment : Fragment() {
             view.findNavController()
                 .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
-    fun newCsharpTest(view: View) {
+    private fun newCsharpTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "c#")
 
@@ -70,7 +65,7 @@ class NavFragment : Fragment() {
             view.findNavController()
                 .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
-    fun newCplusplusTest(view: View) {
+    private fun newCplusplusTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "c++")
 
@@ -78,7 +73,7 @@ class NavFragment : Fragment() {
             view.findNavController()
                 .navigate(R.id.action_navFragment_to_testFragment, test_name) }
     }
-    fun newPythonTest(view: View) {
+    private fun newPythonTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "python")
 

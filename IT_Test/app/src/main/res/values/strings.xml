@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IT_Test</string>
+    <string name="app_name">IT Test</string>
     <string name="imageContent">It is content</string>
     <string name="title">Языки программирования</string>
     <string name="title_java">Java</string>
@@ -15,6 +15,10 @@
     <string name="lable_test_fragment">Tests</string>
     <string name="lable_result_fragment">Result</string>
     <string name="lable_about_fragment">About</string>
+    <string name="title_drawer_java">Go to doc Java</string>
+    <string name="title_drawer_csharp">Go to doc C#</string>
+    <string name="title_drawer_cplusplus">Go to doc C++</string>
+    <string name="title_drawer_python">Go to doc Python</string>
     <string name="about_it_test">
             Тесты по языкам программирования. IT Test - это приложение для тестирования специалистов в сфере информмационных технологий. Приложение содержит тесты по различным языкам програмирования. Если вы изучаете программирование и желаете научиться писать код, если уже собрались сдавать экзамены по информатике: вам сюда! Приложение предоставляет тесты по языкам программирования школьного уровня, выступает надежной платформой для постановки первичных навыков алгоритма и обработки данных. Языки программирования: Java, C++, C#, Python.
     </string>
