@@ -102,8 +102,7 @@
                         android:textColor="#FFFF"
                         android:text="@string/submit_button"
                         android:textSize="18sp"
-                        tools:ignore="OnClick"
-                        tools:targetApi="lollipop" />
+                        tools:ignore="OnClick"/>
 
                 </LinearLayout>
 

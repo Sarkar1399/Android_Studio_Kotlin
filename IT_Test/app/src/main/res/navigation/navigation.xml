@@ -7,17 +7,22 @@
 
     <fragment
         android:id="@+id/navFragment"
-        android:name="com.sarkardeveloper.ittest.NavFragment"
+        android:name="com.sarkardeveloper.ittest.fragments.title.NavFragment"
         android:label="@string/lable_app"
         tools:layout="@layout/fragment_nav">
         <action
             android:id="@+id/action_navFragment_to_testFragment"
             app:destination="@id/testFragment"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_navFragment_to_noConnectFragment"
+            app:destination="@id/noConnectFragment"
+            app:popUpTo="@id/navFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.sarkardeveloper.ittest.TestFragment"
+        android:name="com.sarkardeveloper.ittest.fragments.tests.TestFragment"
         android:label="@string/lable_test_fragment"
         tools:layout="@layout/fragment_test">
         <action
@@ -28,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.sarkardeveloper.ittest.ResultFragment"
+        android:name="com.sarkardeveloper.ittest.fragments.result.ResultFragment"
         android:label="@string/lable_result_fragment"
         tools:layout="@layout/fragment_result">
         <action
@@ -39,7 +44,21 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.sarkardeveloper.ittest.AboutFragment"
+        android:name="com.sarkardeveloper.ittest.fragments.about.AboutFragment"
         android:label="@string/lable_about_fragment"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.sarkardeveloper.ittest.fragments.history.HistoryFragment"
+        android:label="@string/title_drawer_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/noConnectFragment"
+        android:name="com.sarkardeveloper.ittest.fragments.connect.NoConnectFragment"
+        android:label="@string/title_no_connect"
+        tools:layout="@layout/fragment_no_connect">
+        <action
+            android:id="@+id/action_noConnectFragment_to_navFragment"
+            app:destination="@id/navFragment" />
+    </fragment>
 </navigation>

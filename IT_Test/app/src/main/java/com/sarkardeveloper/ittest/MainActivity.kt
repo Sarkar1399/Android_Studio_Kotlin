@@ -13,11 +13,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.sarkardeveloper.test_5.R
 import com.sarkardeveloper.test_5.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.nav_header.*
 import kotlin.system.exitProcess
 
-
-@Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
@@ -45,16 +42,6 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.exit -> {
-                exitToApp()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
     }
 
     private fun exitToApp() {
@@ -114,4 +101,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.exit -> {
+                exitToApp()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 }

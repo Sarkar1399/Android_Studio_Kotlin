@@ -1,33 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/javaDoc"
-        android:title="@string/title_drawer_java"
-        android:icon="@drawable/ic_documentation"
-        android:onClick="goToDocJava"/>
+    <group
+        android:id="@+id/firstGroup"
+        android:checkableBehavior="single">
 
-    <item
-        android:id="@+id/csharpDoc"
-        android:title="@string/title_drawer_csharp"
-        android:icon="@drawable/ic_documentation"
-        android:onClick="goToDocCsharp"/>
+        <item
+            android:id="@+id/javaDoc"
+            android:title="@string/title_drawer_java"
+            android:icon="@drawable/ic_documentation"
+            android:onClick="goToDocJava"/>
 
-    <item
-        android:id="@+id/cplusplusDoc"
-        android:title="@string/title_drawer_cplusplus"
-        android:icon="@drawable/ic_documentation"
-        android:onClick="goToDocCplusplus"/>
+        <item
+            android:id="@+id/csharpDoc"
+            android:title="@string/title_drawer_csharp"
+            android:icon="@drawable/ic_documentation"
+            android:onClick="goToDocCsharp"/>
 
-    <item
-        android:id="@+id/pythonDoc"
-        android:title="@string/title_drawer_python"
-        android:icon="@drawable/ic_documentation"
-        android:onClick="goToDocPython"/>
+        <item
+            android:id="@+id/cplusplusDoc"
+            android:title="@string/title_drawer_cplusplus"
+            android:icon="@drawable/ic_documentation"
+            android:onClick="goToDocCplusplus"/>
 
-    <item
-        android:id="@+id/exit"
-        android:title="@string/exit"
-        android:icon="@drawable/ic_cancel_foreground"
-        android:onClick="onOptionsItemSelected"/>
+        <item
+            android:id="@+id/pythonDoc"
+            android:title="@string/title_drawer_python"
+            android:icon="@drawable/ic_documentation"
+            android:onClick="goToDocPython"/>
+
+    </group>
+
+    <group>
+
+        <item
+            android:id="@+id/historyFragment"
+            android:title="@string/title_drawer_history"
+            android:icon="@drawable/ic_history_edu"
+            />
+
+    </group>
+
 </menu>
