@@ -1,5 +1,8 @@
 package com.sarkardeveloper.ittest.fragments.title
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -45,59 +48,77 @@ class NavFragment : Fragment() {
         newPythonTest(view)
     }
 
+    private fun isConnected(): Boolean
+    {
+        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
+        return activeNetwork?.isConnectedOrConnecting == true
+    }
+
     private fun newJavaTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "Java")
 
-//        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-//        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
-//
-//        val isConnected = activeNetwork?.isConnectedOrConnecting == true
-
+        if (isConnected() == true)
+        {
             layoutJavaCard.setOnClickListener {
                 view.findNavController()
                     .navigate(R.id.action_navFragment_to_testFragment, test_name) }
+        }else{
+            layoutJavaCard.setOnClickListener {
+                view.findNavController()
+                    .navigate(R.id.action_navFragment_to_noConnectFragment) }
+        }
     }
     private fun newCsharpTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "C#")
 
-//        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-//        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
-//
-//        val isConnected = activeNetwork?.isConnectedOrConnecting == true
-
+        if (isConnected() == true)
+        {
             layoutCsharpCard.setOnClickListener {
                 view.findNavController()
                     .navigate(R.id.action_navFragment_to_testFragment, test_name) }
+
+        }else
+        {
+            layoutCsharpCard.setOnClickListener {
+                view.findNavController()
+                    .navigate(R.id.action_navFragment_to_noConnectFragment) }
+        }
     }
 
     private fun newCplusplusTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "C++")
-//
-//        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-//        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
-//
-//        val isConnected = activeNetwork?.isConnectedOrConnecting == true
 
+        if (isConnected() == true)
+        {
             layoutCplusplusCard.setOnClickListener {
                 view.findNavController()
                     .navigate(R.id.action_navFragment_to_testFragment, test_name) }
+        }else
+        {
+            layoutCplusplusCard.setOnClickListener {
+                view.findNavController()
+                    .navigate(R.id.action_navFragment_to_noConnectFragment) }
+        }
 
     }
     private fun newPythonTest(view: View) {
         val test_name = Bundle()
         test_name.putString("key", "Python")
 
-//        val cm = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-//        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
-//
-//        val isConnected = activeNetwork?.isConnectedOrConnecting == true
-
+        if (isConnected() == true)
+        {
             layoutPythonCard.setOnClickListener {
                 view.findNavController()
                     .navigate(R.id.action_navFragment_to_testFragment, test_name) }
-
+        }else
+        {
+            layoutPythonCard.setOnClickListener {
+                view.findNavController()
+                    .navigate(R.id.action_navFragment_to_noConnectFragment) }
+        }
     }
 }

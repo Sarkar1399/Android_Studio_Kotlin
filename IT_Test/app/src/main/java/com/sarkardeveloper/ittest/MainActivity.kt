@@ -44,10 +44,6 @@ class MainActivity : AppCompatActivity() {
         return NavigationUI.navigateUp(navController, drawerLayout)
     }
 
-    private fun exitToApp() {
-        exitProcess(-1)
-    }
-
     private fun sliderTimer(): CountDownTimer {
 
         var imageSlider = findViewById<ImageView>(R.id.imgSlider)
@@ -99,6 +95,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse("https://docs.python.org/3/")
         startActivity(intent)
+    }
+
+    private fun exitToApp() {
+        exitProcess(-1)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

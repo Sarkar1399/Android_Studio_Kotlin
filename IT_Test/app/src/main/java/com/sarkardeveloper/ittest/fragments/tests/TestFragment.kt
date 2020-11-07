@@ -31,7 +31,7 @@ class TestFragment : Fragment() {
         testName()
     }
 
-    fun testName(){
+    private fun testName(){
         var test_name: String? = null
         if (arguments != null){
             test_name = arguments?.getString("key")
@@ -71,11 +71,11 @@ class TestFragment : Fragment() {
                     R.id.answerFour -> correctAnswer.add(answerFour.text as String)
                 }
                 radioGroup.clearCheck()
-                questionsText.text = arra?.get(num)?.Question
-                answerFirst.text = arra?.get(num)?.Answers1
-                answerSecond.text = arra?.get(num)?.Answers2
-                answerThree.text = arra?.get(num)?.Answers3
-                answerFour.text = arra?.get(num)?.Answers4
+                questionsText?.text = arra?.get(num)?.Question
+                answerFirst?.text = arra?.get(num)?.Answers1
+                answerSecond?.text = arra?.get(num)?.Answers2
+                answerThree?.text = arra?.get(num)?.Answers3
+                answerFour?.text = arra?.get(num)?.Answers4
 
                 num++
             }else{
@@ -118,11 +118,11 @@ class TestFragment : Fragment() {
 
                 for (data in datum!!) {
                     if (data.ID == ids) {
-                        questionsText.text = data.Question
-                        answerFirst.text = data.Answers1
-                        answerSecond.text = data.Answers2
-                        answerThree.text = data.Answers3
-                        answerFour.text = data.Answers4
+                        questionsText?.text = data.Question
+                        answerFirst?.text = data.Answers1
+                        answerSecond?.text = data.Answers2
+                        answerThree?.text = data.Answers3
+                        answerFour?.text = data.Answers4
                     }
                 }
             }
@@ -156,13 +156,12 @@ class TestFragment : Fragment() {
                 }
 
                 for (data in datum!!) {
-//                    correctAnswer.add(data.CorrectAnswer)
                     if (data.ID == ids) {
-                        questionsText.text = data.Question
-                        answerFirst.text = data.Answers1
-                        answerSecond.text = data.Answers2
-                        answerThree.text = data.Answers3
-                        answerFour.text = data.Answers4
+                        questionsText?.text = data.Question
+                        answerFirst?.text = data.Answers1
+                        answerSecond?.text = data.Answers2
+                        answerThree?.text = data.Answers3
+                        answerFour?.text = data.Answers4
                     }
                 }
             }
@@ -195,13 +194,12 @@ class TestFragment : Fragment() {
                 }
 
                 for (data in datum!!) {
-//                    correctAnswer.add(data.CorrectAnswer)
                     if (data.ID == ids) {
-                        questionsText.text = data.Question
-                        answerFirst.text = data.Answers1
-                        answerSecond.text = data.Answers2
-                        answerThree.text = data.Answers3
-                        answerFour.text = data.Answers4
+                        questionsText?.text = data.Question
+                        answerFirst?.text = data.Answers1
+                        answerSecond?.text = data.Answers2
+                        answerThree?.text = data.Answers3
+                        answerFour?.text = data.Answers4
                     }
                 }
             }
@@ -234,13 +232,12 @@ class TestFragment : Fragment() {
                 }
 
                 for (data in datum!!) {
-//                    correctAnswer.add(data.CorrectAnswer)
                     if (data.ID == ids) {
-                        questionsText.text = data.Question
-                        answerFirst.text = data.Answers1
-                        answerSecond.text = data.Answers2
-                        answerThree.text = data.Answers3
-                        answerFour.text = data.Answers4
+                        questionsText?.text = data.Question
+                        answerFirst?.text = data.Answers1
+                        answerSecond?.text = data.Answers2
+                        answerThree?.text = data.Answers3
+                        answerFour?.text = data.Answers4
                     }
                 }
             }
