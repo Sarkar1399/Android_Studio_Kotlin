@@ -23,7 +23,7 @@ class TestFragment : Fragment() {
     var num = 0
     var result = 0
     var tests: String = ""
-    var ids = (0..10).random()
+    var ids = (1..10).random()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

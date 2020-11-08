@@ -10,7 +10,7 @@ interface JsonJavaApi {
 }
 
 interface JsonCsharpApi {
-    @GET("csharp.json?alt=media&token=274494a9-7ad7-4b63-9889-1758975654a4")
+    @GET("csharp.json?alt=media&token=7f758217-3bf9-43e2-beab-e3d354a3132c")
     fun getQuestions(): Call<List<Data>>
 }
 
