@@ -69,10 +69,8 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var result = 0
-        var tests = ""
         if (arguments != null){
             result = arguments?.getInt("result")!!
-            tests = arguments?.getString("tests")!!
         }
         Toast.makeText(view.context, result.toString(), Toast.LENGTH_LONG).show()
         progressBar.progress = result
